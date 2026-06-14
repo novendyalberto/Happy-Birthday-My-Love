@@ -287,23 +287,12 @@ const letter = `
 
 Hai Sayang ❤️
 Hari ini adalah hari yang sangat spesial.
-Aku ingin mengucapkan terima kasih
-karena sudah menjadi bagian dari hidupku.
-Terima kasih untuk semua tawa,
-cerita, dan perjuangan yang sudah kita lewati bersama.
-
+Aku ingin mengucapkan terima kasih karena sudah menjadi bagian dari hidupku.
 Mungkin aku tidak sempurna.
 Mungkin aku masih banyak kurangnya.
-
-Tetapi satu hal yang pasti,
-aku selalu berusaha menjadi seseorang
-yang pantas untukmu.
-
-Semoga di usia yang baru ini,
-semua impianmu perlahan menjadi kenyataan.
-
+Tetapi satu hal yang pasti, aku selalu berusaha menjadi seseorang yang pantas untukmu.
+Semoga di usia yang baru ini, semua impianmu perlahan menjadi kenyataan.
 Aku bangga padamu.
-
 Aku sayang kamu ❤️
 
 `;
