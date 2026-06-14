@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday My Love ❤️</title>
+
+<meta name="description" content="Special Birthday Surprise">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="progress-container">
+
+    <div id="progress-bar"></div>
+
+</div>
+<!-- Floating Hearts Container -->
+<div id="hearts-container"></div>
+
+<!-- Background Music -->
+<audio id="bgMusic" loop>
+    <source src="assets/music/romantic.mp3" type="audio/mpeg">
+</audio>
+
+
+<div id="loading-screen">
+
+    <div class="loading-content">
+
+        <h1>❤️</h1>
+
+        <h2>Preparing Your Surprise...</h2>
+
+        <div class="loader"></div>
+
+    </div>
+
+</div>
+<!-- ================================================= -->
+<!-- SCREEN 1 - PASSWORD -->
+<!-- ================================================= -->
+
+<section class="screen active" id="screen-password">
+
+    <div class="glass-card">
+
+        <h1 class="title-script">
+            ❤️ Secret Access ❤️
+        </h1>
+
+        <p class="subtitle">
+            Masukkan tanggal jadian kita!!!
+        </p>
+
+        <input
+            type="password"
+            id="passwordInput"
+            placeholder="DDMMYYYY">
+
+        <button id="passwordBtn">
+            Masuk ❤️
+        </button>
+
+        <p id="passwordMessage"></p>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SCREEN 2 - WELCOME -->
+<!-- ================================================= -->
+
+<section class="screen" id="screen-welcome">
+
+    <div class="glass-card">
+
+        <h1 class="main-title">
+            Happy Birthday ❤️
+        </h1>
+
+        <h2>
+            Untuk Seseorang Yang Sangat Spesial
+        </h2>
+
+        <p>
+            Aku sudah menyiapkan sesuatu untukmu...
+        </p>
+
+        <button class="next-btn" data-next="screen-countdown">
+            💖 Buka Kejutanku
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SCREEN 3 - COUNTDOWN -->
+<!-- ================================================= -->
+
+<section class="screen" id="screen-countdown">
+
+    <div class="glass-card">
+
+        <h1>
+            ⏳ Menuju Hari Istimewamu
+        </h1>
+
+        <div id="countdown">
+
+            <div class="count-box">
+                <span id="days">00</span>
+                <small>Hari</small>
+            </div>
+
+            <div class="count-box">
+                <span id="hours">00</span>
+                <small>Jam</small>
+            </div>
+
+            <div class="count-box">
+                <span id="minutes">00</span>
+                <small>Menit</small>
+            </div>
+
+            <div class="count-box">
+                <span id="seconds">00</span>
+                <small>Detik</small>
+            </div>
+
+        </div>
+
+        <div id="birthdayMessage"></div>
+
+        <button class="next-btn" data-next="screen-memories">
+            Lanjut ❤️
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SCREEN 4 - MEMORIES -->
+<!-- ================================================= -->
+
+<section class="screen" id="screen-memories">
+
+    <div class="glass-card large-card">
+
+        <h1>📸 Our Memories</h1>
+
+        <div class="slider-container">
+
+            <div class="slider">
+
+                <div class="slide active-slide">
+
+                    <img src="assets/images/memory1.jpg">
+
+                    <p>
+                        Awal dari semua cerita kita ❤️
+                    </p>
+
+                </div>
+
+                <div class="slide">
+
+                    <img src="assets/images/memory2.jpg">
+
+                    <p>
+                        Hari yang selalu membuatku tersenyum saat mengingatnya.
+                    </p>
+
+                </div>
+
+                <div class="slide">
+
+                    <img src="assets/images/memory3.jpg">
+
+                    <p>
+                        Momen sederhana yang ternyata sangat berharga.
+                    </p>
+
+                </div>
+
+                <div class="slide">
+
+                    <img src="assets/images/memory4.jpg">
+
+                    <p>
+                        Salah satu alasan aku bersyukur bertemu denganmu.
+                    </p>
+
+                </div>
+
+                <div class="slide">
+
+                    <img src="assets/images/memory5.jpg">
+
+                    <p>
+                        Semoga nanti ada lebih banyak foto seperti ini.
+                    </p>
+
+                </div>
+
+                <div class="slide">
+
+                    <img src="assets/images/memory6.jpg">
+
+                    <p>
+                        Dan semoga ini bukan kenangan terakhir yang kita buat bersama ❤️
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="slider-controls">
+
+            <button id="prevSlide">
+                ←
+            </button>
+
+            <button id="nextSlide">
+                →
+            </button>
+
+        </div>
+
+        <button class="next-btn" data-next="screen-reasons">
+            Lanjut ❤️
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SCREEN 5 - REASONS -->
+<!-- ================================================= -->
+
+<section class="screen" id="screen-reasons">
+
+    <div class="glass-card">
+
+        <h1>❤️ Things I Love About You</h1>
+
+        <div class="reason-list">
+
+            <div class="reason-card">
+                Karena kamu selalu berusaha.
+            </div>
+
+            <div class="reason-card">
+                Karena kamu tetap kuat meski lelah.
+            </div>
+
+            <div class="reason-card">
+                Karena kamu peduli kepada orang lain.
+            </div>
+
+            <div class="reason-card">
+                Karena kamu membuat hariku lebih baik.
+            </div>
+
+            <div class="reason-card">
+                Karena kamu adalah rumah yang ingin selalu aku tuju.
+            </div>
+
+        </div>
+
+        <button class="next-btn" data-next="screen-letter">
+            Ada Surat Untukmu ❤️
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SCREEN 6 - LETTER -->
+<!-- ================================================= -->
+
+<section class="screen" id="screen-letter">
+
+    <div class="glass-card">
+
+        <h1>💌 Letter For You</h1>
+
+        <div id="typewriterText"></div>
+
+        <button class="next-btn" data-next="screen-video">
+            Lihat Sesuatu ❤️
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SCREEN 7 - VIDEO -->
+<!-- ================================================= -->
+
+<section class="screen" id="screen-video">
+
+    <div class="glass-card large-card">
+
+        <h1>🎥 Special Video</h1>
+
+        <p>
+            Izinkan video ini yang berbicara ❤️
+        </p>
+
+        <video
+            id="birthdayVideo"
+            controls
+            preload="metadata">
+
+            <source
+                src="assets/video/montage.mp4"
+                type="video/mp4">
+
+        </video>
+
+        <button
+            id="videoNextBtn"
+            class="hidden-btn"
+            data-next="screen-future">
+
+            ❤️ Aku Masih Punya Satu Hal Lagi
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SCREEN 8 - FUTURE -->
+<!-- ================================================= -->
+
+<section class="screen" id="screen-future">
+
+    <div class="glass-card">
+
+        <h1>🌙 My Wishes For You</h1>
+
+        <div class="future-text">
+
+            <p>Aku berharap...</p>
+
+            <p>Kamu selalu sehat.</p>
+
+            <p>Kamu selalu bahagia.</p>
+
+            <p>Kamu selalu dikelilingi orang-orang baik.</p>
+
+            <p>Kamu berhasil mencapai semua impianmu.</p>
+
+            <p>
+                Dan semoga aku masih bisa
+                menemanimu dalam perjalanan itu ❤️
+            </p>
+
+        </div>
+
+        <button class="next-btn" data-next="screen-final">
+            Terakhir ❤️
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================================================= -->
+<!-- SCREEN 9 - FINAL -->
+<!-- ================================================= -->
+
+<section class="screen" id="screen-final">
+
+    <div class="glass-card">
+
+        <h1 class="title-script">
+            Happy Birthday My Love ❤️
+        </h1>
+
+        <h2>
+            15 Juni 2026
+        </h2>
+
+        <div class="final-message">
+
+            <p>
+                Terima kasih sudah hadir dalam hidupku.
+            </p>
+
+            <p>
+                Sejak 09 Oktober 2023,
+                kamu telah menjadi bagian dari banyak
+                hal baik yang terjadi dalam hidupku.
+            </p>
+
+            <p>
+                Aku tidak tahu apa yang akan terjadi
+                di masa depan.
+            </p>
+
+            <p>
+                Tetapi aku tahu bahwa bertemu denganmu
+                adalah salah satu hal terbaik yang pernah
+                terjadi dalam hidupku.
+            </p>
+
+            <p>
+                Selamat ulang tahun sayang.
+            </p>
+
+            <p>
+                Aku mencintaimu ❤️
+            </p>
+
+        </div>
+
+        <button id="restartBtn">
+            💌 Ulangi Perjalanan Ini
+        </button>
+
+    </div>
+
+</section>
+
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>

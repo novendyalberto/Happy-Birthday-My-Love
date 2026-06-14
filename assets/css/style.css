@@ -1,0 +1,1066 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    overflow:hidden;
+
+    color:#fff;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ff5fa2,
+    #ff85c0,
+    #ffc4dd
+    );
+
+    background-size:400% 400%;
+
+    animation:
+    gradientMove 15s ease infinite;
+
+    min-height:100vh;
+
+    position:relative;
+}
+
+@keyframes gradientMove{
+
+    0%{
+        background-position:0% 50%;
+    }
+
+    50%{
+        background-position:100% 50%;
+    }
+
+    100%{
+        background-position:0% 50%;
+    }
+
+}
+
+/* =====================================================
+   LOADING SCREEN
+===================================================== */
+
+#loading-screen{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ff5fa2,
+    #ff85c0
+    );
+
+    z-index:99999;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    transition:1s;
+}
+
+.loading-content{
+
+    text-align:center;
+}
+
+.loading-content h1{
+
+    font-size:5rem;
+
+    margin-bottom:10px;
+}
+
+.loading-content h2{
+
+    font-size:1.3rem;
+
+    font-weight:400;
+}
+
+.loader{
+
+    width:70px;
+    height:70px;
+
+    margin:30px auto;
+
+    border:6px solid white;
+
+    border-top:6px solid transparent;
+
+    border-radius:50%;
+
+    animation:
+    spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* =====================================================
+   PROGRESS BAR
+===================================================== */
+
+#progress-container{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:6px;
+
+    background:
+    rgba(255,255,255,.15);
+
+    z-index:9999;
+}
+
+#progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    background:white;
+
+    transition:.6s;
+}
+
+/* =====================================================
+   SCREEN
+===================================================== */
+
+.screen{
+
+    width:100%;
+    min-height:100vh;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    animation:
+    screenFade .8s ease;
+}
+
+.screen.active{
+
+    display:flex;
+}
+
+@keyframes screenFade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+   GLASSMORPHISM CARD
+===================================================== */
+
+.glass-card{
+
+    width:100%;
+    max-width:850px;
+
+    background:
+    rgba(255,255,255,.15);
+
+    border:
+    1px solid rgba(255,255,255,.3);
+
+    backdrop-filter:blur(18px);
+
+    padding:35px;
+
+    border-radius:35px;
+
+    text-align:center;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.15);
+}
+
+.large-card{
+
+    max-width:1000px;
+}
+
+/* =====================================================
+   TYPOGRAPHY
+===================================================== */
+
+.title-script{
+
+    font-family:
+    'Great Vibes',
+    cursive;
+
+    font-size:4.5rem;
+
+    margin-bottom:15px;
+
+    text-shadow:
+    0 0 10px rgba(255,255,255,.7),
+    0 0 20px rgba(255,255,255,.5),
+    0 0 40px rgba(255,255,255,.3);
+}
+
+.main-title{
+
+    font-family:
+    'Great Vibes',
+    cursive;
+
+    font-size:4rem;
+
+    margin-bottom:15px;
+}
+
+h1{
+
+    font-size:2.2rem;
+
+    margin-bottom:20px;
+}
+
+h2{
+
+    margin-bottom:15px;
+}
+
+p{
+
+    line-height:1.8;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+button{
+
+    margin-top:20px;
+
+    padding:
+    14px 28px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:white;
+
+    color:#ff4f95;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:
+    translateY(-3px);
+
+    box-shadow:
+    0 10px 25px rgba(0,0,0,.15);
+}
+
+#restartBtn{
+
+    background:#fff;
+
+    color:#ff4f95;
+}
+
+/* =====================================================
+   INPUT
+===================================================== */
+
+input{
+
+    width:100%;
+
+    max-width:320px;
+
+    margin-top:20px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    outline:none;
+
+    text-align:center;
+
+    font-size:1rem;
+}
+
+#passwordMessage{
+
+    margin-top:15px;
+
+    min-height:25px;
+
+    font-weight:600;
+}
+
+/* =====================================================
+   LOVE COUNTER
+===================================================== */
+
+#loveCounter{
+
+    margin-top:20px;
+
+    font-size:1.1rem;
+
+    line-height:2;
+}
+
+#loveCounter strong{
+
+    font-size:1.8rem;
+}
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.timeline{
+
+    margin-top:30px;
+}
+
+.timeline-item{
+
+    padding:15px;
+
+    margin-bottom:15px;
+
+    border-radius:15px;
+
+    background:
+    rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+}
+
+.timeline-item span{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-size:.9rem;
+
+    opacity:.9;
+}
+
+/* =====================================================
+   COUNTDOWN
+===================================================== */
+
+#countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:30px;
+}
+
+.count-box{
+
+    width:110px;
+
+    height:110px;
+
+    background:
+    rgba(255,255,255,.2);
+
+    border-radius:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    backdrop-filter:blur(10px);
+}
+
+.count-box span{
+
+    font-size:2rem;
+
+    font-weight:bold;
+}
+
+.count-box small{
+
+    margin-top:5px;
+}
+
+/* =====================================================
+   BIRTHDAY MESSAGE
+===================================================== */
+
+#birthdayMessage{
+
+    margin-top:25px;
+
+    font-size:1.3rem;
+
+    font-weight:600;
+}
+
+/* =====================================================
+   MEMORIES SLIDER
+===================================================== */
+
+.slider-container{
+
+    margin-top:25px;
+}
+
+.slide{
+
+    display:none;
+}
+
+.active-slide{
+
+    display:block;
+}
+
+.slide img{
+
+    width:100%;
+
+    max-width:500px;
+
+    border-radius:25px;
+
+    margin-bottom:20px;
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.2);
+}
+
+.slide p{
+
+    max-width:650px;
+
+    margin:auto;
+}
+
+.slider-controls{
+
+    margin-top:20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+}
+
+.slider-controls button{
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+}
+
+/* =====================================================
+   REASON SECTION
+===================================================== */
+
+.reason-list{
+
+    margin-top:25px;
+
+    display:grid;
+
+    gap:15px;
+}
+
+.reason-card{
+
+    background:
+    rgba(255,255,255,.15);
+
+    padding:18px;
+
+    border-radius:18px;
+
+    backdrop-filter:blur(12px);
+
+    transition:.4s;
+
+    opacity:0;
+
+    transform:
+    translateY(20px);
+}
+
+.reason-card.show{
+
+    opacity:1;
+
+    transform:
+    translateY(0);
+}
+
+.reason-card:hover{
+
+    transform:
+    scale(1.03);
+
+    background:
+    rgba(255,255,255,.25);
+}
+
+/* =====================================================
+   LETTER SECTION
+===================================================== */
+
+#typewriterText{
+
+    max-width:700px;
+
+    margin:auto;
+
+    text-align:left;
+
+    white-space:pre-line;
+
+    line-height:2;
+
+    min-height:300px;
+
+    padding:20px;
+
+    background:
+    rgba(255,255,255,.1);
+
+    border-radius:20px;
+
+    margin-top:20px;
+}
+
+/* Cursor Typewriter */
+
+#typewriterText::after{
+
+    content:"|";
+
+    animation:
+    blink .7s infinite;
+}
+
+@keyframes blink{
+
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:0;
+    }
+
+    100%{
+        opacity:1;
+    }
+
+}
+
+/* =====================================================
+   VIDEO SECTION
+===================================================== */
+
+video{
+
+    width:100%;
+
+    max-width:800px;
+
+    margin-top:20px;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.25);
+}
+
+.hidden-btn{
+
+    display:none;
+}
+
+.hidden-btn.show{
+
+    display:inline-block;
+
+    animation:
+    fadeButton .8s ease;
+}
+
+@keyframes fadeButton{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/* =====================================================
+   FUTURE WISHES
+===================================================== */
+
+.future-text{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:20px;
+}
+
+.future-text p{
+
+    font-size:1.1rem;
+}
+
+/* =====================================================
+   FINAL MESSAGE
+===================================================== */
+
+.final-message{
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:25px;
+}
+
+.final-message p{
+
+    font-size:1.05rem;
+}
+
+/* =====================================================
+   FINAL PHOTO
+===================================================== */
+
+.final-photo{
+
+    margin:25px auto;
+
+    width:250px;
+
+    height:250px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    border:5px solid white;
+
+    box-shadow:
+    0 0 30px rgba(255,255,255,.6);
+}
+
+.final-photo img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+/* =====================================================
+   WHATSAPP BUTTON
+===================================================== */
+
+.whatsapp-btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:25px;
+
+    padding:
+    16px 30px;
+
+    border-radius:999px;
+
+    background:#25D366;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.whatsapp-btn:hover{
+
+    transform:
+    translateY(-4px);
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.2);
+}
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+#hearts-container{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:1000;
+}
+
+.heart{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    animation:
+    floatHeart linear forwards;
+
+    opacity:.9;
+}
+
+@keyframes floatHeart{
+
+    0%{
+
+        transform:
+        translateY(0)
+        scale(.5);
+
+        opacity:0;
+    }
+
+    10%{
+
+        opacity:1;
+    }
+
+    100%{
+
+        transform:
+        translateY(-120vh)
+        scale(1.5);
+
+        opacity:0;
+    }
+
+}
+
+/* =====================================================
+   CONFETTI OVERLAY
+===================================================== */
+
+#confetti-container{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    z-index:9998;
+}
+
+/* =====================================================
+   SOFT GLOW EFFECT
+===================================================== */
+
+.glow{
+
+    animation:
+    glowPulse 2s infinite;
+}
+
+@keyframes glowPulse{
+
+    0%{
+
+        box-shadow:
+        0 0 10px rgba(255,255,255,.4);
+
+    }
+
+    50%{
+
+        box-shadow:
+        0 0 30px rgba(255,255,255,.8);
+
+    }
+
+    100%{
+
+        box-shadow:
+        0 0 10px rgba(255,255,255,.4);
+
+    }
+
+}
+
+/* =====================================================
+   FADE IN DELAY
+===================================================== */
+
+.fade-delay-1{
+
+    animation-delay:.3s;
+}
+
+.fade-delay-2{
+
+    animation-delay:.6s;
+}
+
+.fade-delay-3{
+
+    animation-delay:.9s;
+}
+
+/* =====================================================
+   SCROLLBAR
+===================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:
+    rgba(255,255,255,.15);
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:white;
+
+    border-radius:20px;
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+
+@media(max-width:768px){
+
+    .title-script{
+
+        font-size:3rem;
+    }
+
+    .main-title{
+
+        font-size:3rem;
+    }
+
+    h1{
+
+        font-size:1.7rem;
+    }
+
+    .glass-card{
+
+        padding:25px;
+    }
+
+    .count-box{
+
+        width:85px;
+        height:85px;
+    }
+
+    .count-box span{
+
+        font-size:1.4rem;
+    }
+
+    button{
+
+        width:100%;
+    }
+
+    .whatsapp-btn{
+
+        width:100%;
+    }
+
+    .final-photo{
+
+        width:200px;
+        height:200px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .title-script{
+
+        font-size:2.4rem;
+    }
+
+    .main-title{
+
+        font-size:2.4rem;
+    }
+
+    h1{
+
+        font-size:1.4rem;
+    }
+
+    p{
+
+        font-size:.95rem;
+    }
+
+    .glass-card{
+
+        padding:20px;
+    }
+
+    .slide img{
+
+        border-radius:15px;
+    }
+
+    .final-photo{
+
+        width:170px;
+        height:170px;
+    }
+
+}
