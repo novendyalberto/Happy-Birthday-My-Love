@@ -286,17 +286,13 @@ document.getElementById(
 const letter = `
 
 Hai Sayang ❤️
-
 Hari ini adalah hari yang sangat spesial.
-
 Aku ingin mengucapkan terima kasih
 karena sudah menjadi bagian dari hidupku.
-
 Terima kasih untuk semua tawa,
 cerita, dan perjuangan yang sudah kita lewati bersama.
 
 Mungkin aku tidak sempurna.
-
 Mungkin aku masih banyak kurangnya.
 
 Tetapi satu hal yang pasti,
